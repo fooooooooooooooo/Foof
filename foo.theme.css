@@ -1,0 +1,154 @@
+/* //META{ "name": "Frosty", "description": "FOOF", "author": "Foo", "version": "1.0.1", "source":"ur mom "} *//**/
+
+.theme-dark {
+    --header-primary: #fff;
+    --header-secondary: #b9bbbe;
+    --text-normal: #dcddde;
+    --text-muted: #72767d;
+    --text-link: #00b0f4;
+    --channels-default: #8e9297;
+    --interactive-normal: #b9bbbe;
+    --interactive-hover: #dcddde;
+    --interactive-active: #fff;
+    --interactive-muted: #4f545c;
+    --background-primary: #36393f00;
+    --background-secondary: #2f313600;
+    --background-tertiary: #20222500;
+    --background-accent: #0062ff00;
+    --background-floating: #0040ff00;
+    --background-modifier-hover: rgba(79, 84, 92, 0.16);
+    --background-modifier-active: rgba(79, 84, 92, 0.24);
+    --background-modifier-selected: rgba(79, 84, 92, 0.32);
+    --background-modifier-accent: hsla(0, 0%, 100%, 0.06);
+    --elevation-low: 0 1px 0 rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
+    --elevation-high: 0 8px 16px rgba(0, 0, 0, 0.24);
+    --guild-header-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    --channeltextarea-background: #40444b00;
+    --activity-card-background: #20222500;
+    --deprecated-panel-background: #292b2f00;
+    --deprecated-card-bg: rgba(32, 34, 37, 0);
+    --deprecated-card-editable-bg: rgba(32, 34, 37, 0.3);
+    --deprecated-store-bg: #36393f00;
+    --deprecated-quickswitcher-input-background: #72767d00;
+    --deprecated-quickswitcher-input-placeholder: hsla(0, 0%, 100%, 0.3);
+    --deprecated-text-input-bg: rgba(0, 0, 0, 0.1);
+    --deprecated-text-input-border: rgba(0, 0, 0, 0.3);
+    --deprecated-text-input-border-hover: #04040500;
+    --deprecated-text-input-border-disabled: #20222500;
+    --deprecated-text-input-prefix: #dcddde;
+}
+
+#app-mount {
+    border: none !important;
+    background-color: #000;
+    background-image: var(--imageNonBlurred);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Blurry */
+.da-innerNoAutocomplete,
+.da-userPopout,
+.da-header,
+.da-body,
+.da-footer,
+.da-contextMenu,
+.da-quickMessage,
+.da-input,
+.da-card,
+.da-switch,
+.da-select,
+.da-size,
+.da-menu,
+.da-themedPopout,
+.da-messageGroupWrapper,
+.da-recentMentionsPopout,
+.da-textArea,
+.da-option,
+.da-autocompleteRow {
+    border: none !important;
+    background-image: var(--imageBlurred);
+    background-color: transparent !important;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* HoverBlur */
+
+.content-3at_AU:hover,
+.da-collapsed:hover,
+.da-clickable:hover,
+.da-search,
+.da-item:hover,
+.da-name:hover {
+    border: none;
+    background-image: var(--imageBlurred);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 4px;
+}
+
+/* Clear */
+.da-standardSidebarView,
+.da-searchResult,
+.da-hit,
+.da-sibling,
+.da-channelSeparator,
+.da-channelName,
+.da-searchHeader,
+.da-game,
+.da-friendsTable,
+.da-container,
+.da-uploadModal,
+.da-autocompleteInner,
+.da-scrollerWrap {
+    border: none !important;
+    box-shadow: none !important;
+    background-image: var(--imageNonBlurred);
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Remove fade in message search results */
+.da-searchResult::before,
+.da-searchResult::after {
+    background-image: none !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar-button {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: none !important
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: none !important
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: none !important
+}
+
+::-webkit-scrollbar-track-piece {
+    background: transparent !important;
+    border: none !important;
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: none !important
+}
+
+
+
+:root {
+    --imageNonBlurred: url(https://i.imgur.com/04GKOra.jpg);
+    --imageBlurred: url(https://i.imgur.com/dgBOlGy.jpg);
+}
