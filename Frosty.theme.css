@@ -2,7 +2,7 @@
   * @name Frosty
   * @description A theme based heavily on Frosted Glass Rewrite with my own changes (https://github.com/Altenhh/Altens-betterdiscord-Themes-Plugins)
   * @author fooooooooooooooo
-  * @version 1.1.1
+  * @version 1.1.2
   * @source
   */
 
@@ -51,6 +51,14 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+}
+
+#app-mount,
+.chat-3bRxxu,
+.messagesWrapper-3lZDfY {
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 2px !important;
+    font-family: "Whitney";
+    font-weight: 500 !important;
 }
 
 /* Blurry */
@@ -108,13 +116,14 @@ code,
 
 /* Switches */
 .valueUnchecked-2lU_20,
-.ui-switch {
-    background: rgb(255, 50, 50, 0.7) !important;
+.ui-switch,
+.da-numberBadge {
+    background: var(--offColor) !important;
 }
 
 .valueChecked-m-4IJZ,
 .checked {
-    background: rgb(50, 255, 50, 0.5) !important;
+    background: var(--onColor) !important;
 }
 
 /* Css customizer */
@@ -189,14 +198,15 @@ code,
 .da-videoBackground,
 .da-unfollowButton,
 .da-container,
-.modal-yWgWj- {
+.modal-yWgWj-,
+.da-searchResultsWrap {
     border: none !important;
     box-shadow: none !important;
-    background-image: var(--imageNonBlurred);
+    background-image: var(--imageNonBlurred) !important;
     background-color: transparent;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-position: center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
 }
 
 
@@ -204,7 +214,8 @@ code,
 .da-videoBottom,
 .da-videoTop,
 .da-iconsWrapper,
-.da-videoCenter {
+.da-videoCenter,
+.da-resultsWrapper {
     background-color: transparent;
     background-image: none;
     background: transparent;
@@ -275,4 +286,6 @@ code,
     --imageNonBlurred: url(https://i.imgur.com/04GKOra.jpg);
     --imageBlurred: url(https://i.imgur.com/dgBOlGy.jpg);
     --imageBlurredDarker: url(https://i.imgur.com/eT5m6pv.png);
+    --offColor: rgb(230, 50, 50) !important;
+    --onColor: rgb(50, 190, 50) !important;
 }
