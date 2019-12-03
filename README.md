@@ -1,3 +1,3 @@
-# Foof
+# Frosty
 
-Shit theme dont touch it
+An ok theme
