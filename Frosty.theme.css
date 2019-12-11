@@ -64,7 +64,6 @@
 /* Blurry */
 .da-innerNoAutocomplete,
 .da-userPopout,
-.da-body,
 .da-footer,
 .da-contextMenu,
 .da-quickMessage,
@@ -77,33 +76,58 @@
 .da-themedPopout,
 .da-messageGroupWrapper,
 .da-recentMentionsPopout,
-.da-textArea,
 .da-option,
 .da-autocompleteRow,
 .da-tabBarContainer,
 .bd-modal-body,
 .footer,
 .header,
-.da-scrollerThemed,
 .inline,
 .btn,
 .btn-primary,
-.da-searchFilter {
+.da-searchFilter,
+.header-ykumBX,
+.da-userPopout .da-scrollerWrap,
+.da-popouts .da-popout,
+.da-topSectionNormal .da-header,
+.da-topSectionNormal .da-activity {
     border: none !important;
     background-image: var(--imageBlurred);
     background-color: transparent;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-position: center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
 }
 
+.da-popouts .da-popout {
+    background-image: var(--imageBlurred) !important;
+    background-position-x: center !important;
+    background-size: 100vw, 100vh !important;
+    background-attachment: fixed !important;
+}
 
+/* Bottom Border */
+
+.da-userPopout .da-scrollerWrap {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+/* No border */
+.da-layerContainer {
+    border: none !important;
+}
+
+/* Buttons */
+
+.da-jumpButton {
+    background: rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1) !important;
+}
 
 /* Embed Blur */
 
 .da-embedWrapper,
 code,
-.scrollbarGhostHairline-1mSOM1,
 .da-connection {
 
     background-image: var(--imageBlurred);
@@ -111,58 +135,8 @@ code,
     background-position: center !important;
     background-size: cover !important;
     background-attachment: fixed !important;
-    border-radius: 7px;
+    border-radius: 4px;
 }
-
-/* Switches */
-.valueUnchecked-2lU_20,
-.ui-switch,
-.da-numberBadge {
-    background: var(--offColor) !important;
-}
-
-.valueChecked-m-4IJZ,
-.checked {
-    background: var(--onColor) !important;
-}
-
-/* Css customizer */
-
-#bd-customcss-editor,
-#bd-customcss-attach-controls {
-    border-radius: 7px;
-    background-image: var(--imageBlurred) !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-}
-
-#bd-customcss-attach-controls {
-    margin-top: 50px;
-}
-
-.ace_gutter-layer {
-    background-image: var(--imageBlurred) !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-    border-right: 4px solid rgba(0, 0, 0, 0.2) !important;
-}
-
-.ace_content,
-.ace_line {
-    background-image: var(--imageBlurred) !important;
-    background-color: transparent !important;
-    background-position: center !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-}
-
-.ace_cursor-layer {
-    background-color: transparent !important;
-    background: transparent !important;
-}
-
 
 
 /* Hover blur */
@@ -194,15 +168,16 @@ code,
 .da-friendsTable,
 .da-uploadModal,
 .da-autocompleteInner,
-.da-scrollerWrap,
 .da-videoBackground,
 .da-unfollowButton,
 .da-container,
 .modal-yWgWj-,
-.da-searchResultsWrap {
+.da-searchResultsWrap,
+.da-messagesPopoutWrap .scroller-2FKFPG,
+.da-modal .da-inner .da-flex .da-body {
     border: none !important;
     box-shadow: none !important;
-    background-image: var(--imageNonBlurred) !important;
+    background-image: var(--imageNonBlurred);
     background-color: transparent;
     background-position: center !important;
     background-size: cover !important;
@@ -211,19 +186,31 @@ code,
 
 
 /* Transparent */
+.da-name,
+.da-dividerContent,
+.da-container,
+.da-clickable,
 .da-videoBottom,
 .da-videoTop,
 .da-iconsWrapper,
 .da-videoCenter,
-.da-resultsWrapper {
-    background-color: transparent;
+.da-resultsWrapper,
+.da-actionButtons,
+.da-userPopout .da-scrollerWrap .da-bodyInner,
+.da-resultsGroup .da-option,
+.da-container,
+.da-nameAndDecorators {
+    background-color: transparent !important;
     background-image: none;
     background: transparent;
+    box-shadow: none !important;
 }
 
 /* Remove fade in message search results */
 .da-searchResult::before,
-.da-searchResult::after {
+.da-searchResult::after,
+.da-option::before,
+.da-option::after {
     background-image: none !important;
 }
 
@@ -261,25 +248,89 @@ code,
 /* Blurry darker */
 
 .sidebar-2K8pFh,
-.da-name,
 .da-guilds,
 .da-sidebarRegion,
-.container-2Rl01u {
+.container-2Rl01u,
+.da-userPopout .da-header,
+.da-channelTextArea .da-inner,
+.da-topSectionNormal .da-tabBarContainer,
+.guilds-1SWlCJ,
+.da-embedHorizontal .da-description,
+.da-embedHorizontal .da-mediaHorizontal {
     background-image: var(--imageBlurredDarker) !important;
     background-position: center !important;
     background-size: cover !important;
     background-attachment: fixed !important;
 }
 
-.da-name,
-.da-dividerContent,
-.da-container,
-.da-clickable,
-.da-scrollerWrap {
-    background-image: none !important;
-    background: transparent !important;
-    background-color: transparent !important;
+/* Fix gap in titlebar because left panel can't reach there */
+
+.titleBar-AC4pGV::after {
+    background-image: var(--imageBlurredDarker) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    content: "";
+    position: absolute;
+    z-index: -1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 312px;
+    height: 22px;
 }
+
+
+/* Switches */
+.valueUnchecked-2lU_20,
+.ui-switch,
+.da-numberBadge {
+    background: var(--offColor) !important;
+}
+
+.valueChecked-m-4IJZ,
+.checked {
+    background: var(--onColor) !important;
+}
+
+/* Css customizer */
+
+#bd-customcss-editor,
+#bd-customcss-attach-controls {
+    border-radius: 4px;
+    background-image: var(--imageBlurred) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+#bd-customcss-attach-controls {
+    margin-top: 50px;
+}
+
+.ace_gutter-layer {
+    background-image: var(--imageBlurred) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    border-right: 4px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.ace_content,
+.ace_line {
+    background-image: var(--imageBlurred) !important;
+    background-color: transparent !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+.ace_cursor-layer {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+
 
 /* Variables */
 :root {
